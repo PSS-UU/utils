@@ -45,8 +45,9 @@ The following caveats apply:
 ### Specifying Story Points
 
 You can specify story points in the notes of a card. Any number in parenthesis
-followed by an optional P is considered a story point. For cards without story
-points, a default value is used (currently 1).
+followed by an optional P is considered a story point, or any occurrence by the
+string "weight: " followed by a number. For cards without story points, a
+default value is used (currently 1).
 
 I believe all current methods for specifying story points are parsed correctly,
 but PRs are welcome otherwise!
