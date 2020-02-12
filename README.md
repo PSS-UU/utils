@@ -5,7 +5,7 @@ Systems, so far just `burndown.sh`.
 
 ## Usage
 
-`burndown.sh` is a script for generating a burndown chart of your progress
+`burndown.py` is a script for generating a burndown chart of your progress
 across the course, based on information found in your team project (Kanban
 board). Use it with the name of your team's _repository_ name (the one holding
 your project).
