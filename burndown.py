@@ -13,7 +13,7 @@ COURSE_START = datetime(2020, 2, 3, tzinfo=TIMEZONE)
 COURSE_END = datetime(2020, 3, 21, tzinfo=TIMEZONE)
 
 # Something like (17), or (5.5) or (13P)
-STORY_PTS_PAREN_RE = re.compile(r"\((?P<pts>\d+(\.\d+)?)P?\)")
+STORY_PTS_PAREN_RE = re.compile(r"[\(\[](?P<pts>\d+(\.\d+)?)[Pp]?[\)\]]")
 
 # Something like "weight: 0.5"
 STORY_PTS_INLINE_RE = re.compile(r"weight:\s+(?P<pts>\d+(\.\d+)?)\b")
