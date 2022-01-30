@@ -1,7 +1,9 @@
 ## What's This?
 
 This is a collection of various utilities for the course Platform-Spanning
-Systems, so far just `burndown.sh`.
+Systems, so far just `burndown.sh`. The other scripts are used by  to automate
+the use of GitHub, but students are encouraged to look at them if they are
+interested.
 
 ## Usage
 
