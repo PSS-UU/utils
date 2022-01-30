@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 
-TEAMS=(whoami pixelice mealmayham stickling mibrary ting the-final-rest)
+TEAMS=()
 JUNK_FILES="*.ttf,*.bin,*.lock,*.json,*.save,*.jar,*.plist,*.xc*,*.properties,*.pbxproj"
 PERTINENT_FILES="*.gradle,*.kt,*.js,*.ex,*.exs,*.swift,*.py,*.sqlite,*.dart,*.bzl,*.ts,*.tsx,*.java"
 
