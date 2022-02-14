@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 
-TEAMS=("vegify-1")
+TEAMS=()
 JUNK_FILES="\.ttf$|\.bin$|\.lock$|\.json$|\.save$|\.jar$|\.plist$|\.xc$|\.properties$|\.pbxproj$"
 PERTINENT_FILES="\.gradle$|\.kt$|\.kts$|\.js$|\.ex$|\.exs$|\.swift$|\.py$|\.pyo$|\.sqlite$|\.dart$|\.bzl$|\.ts$|\.tsx$|\.java$\.go$|\.rs$|\.php$|\.rb$"
 
