@@ -3,7 +3,7 @@
 
 TEAMS=("vegify-1")
 JUNK_FILES="\.ttf$|\.bin$|\.lock$|\.json$|\.save$|\.jar$|\.plist$|\.xc$|\.properties$|\.pbxproj$"
-PERTINENT_FILES="\.gradle$|\.kt$|\.js$|\.ex$|\.exs$|\.swift$|\.py$|\.sqlite$|\.dart$|\.bzl$|\.ts$|\.tsx$|\.java$"
+PERTINENT_FILES="\.gradle$|\.kt$|\.kts$|\.js$|\.ex$|\.exs$|\.swift$|\.py$|\.pyo$|\.sqlite$|\.dart$|\.bzl$|\.ts$|\.tsx$|\.java$\.go$|\.rs$|\.php$|\.rb$"
 
 rm -rf work
 mkdir work
