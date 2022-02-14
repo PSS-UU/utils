@@ -1,10 +1,9 @@
 #!/bin/zsh
 
 
-TEAMS=()
-JUNK_FILES="*.ttf,*.bin,*.lock,*.json,*.save,*.jar,*.plist,*.xc*,*.properties,*.pbxproj"
-PERTINENT_FILES="*.gradle,*.kt,*.js,*.ex,*.exs,*.swift,*.py,*.sqlite,*.dart,*.bzl,*.ts,*.tsx,*.java"
-
+TEAMS=("vegify-1")
+JUNK_FILES="\.ttf$|\.bin$|\.lock$|\.json$|\.save$|\.jar$|\.plist$|\.xc$|\.properties$|\.pbxproj$"
+PERTINENT_FILES="\.gradle$|\.kt$|\.js$|\.ex$|\.exs$|\.swift$|\.py$|\.sqlite$|\.dart$|\.bzl$|\.ts$|\.tsx$|\.java$"
 
 rm -rf work
 mkdir work
@@ -16,13 +15,13 @@ do
     git clone --quiet "git@github.com:PSS-UU/${team}.git" $target_dir
     pushd $target_dir
     git fame \
-        --hide-progressbar \
-        --whitespace \
-        --by-type \
-        --format=csv \
-        --include=$PERTINENT_FILES
+        --silent-progress \
+        --ignore-whitespace \
+        --bytype \
+        --incl=$PERTINENT_FILES \
+        --excl=$JUNK_FILES \
+        --format=csv
     echo "=========="
     popd
 done
-
 
