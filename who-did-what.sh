@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 
-TEAMS=()
+TEAMS=(aubon nationsguiden-2 stickling-2022 vegify-1 vegify-2 padel-buddy)
 JUNK_FILES="\.ttf$|\.bin$|\.lock$|\.json$|\.save$|\.jar$|\.plist$|\.xc$|\.properties$|\.pbxproj$"
 PERTINENT_FILES="\.gradle$|\.kt$|\.kts$|\.js$|\.ex$|\.exs$|\.swift$|\.py$|\.pyo$|\.sqlite$|\.dart$|\.bzl$|\.ts$|\.tsx$|\.java$\.go$|\.rs$|\.php$|\.rb$"
 
