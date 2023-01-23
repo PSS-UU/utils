@@ -46,11 +46,11 @@ def create_team(team_name, repo_name, owners):
     for owner in owners:
         add_to_organisation(owner, role="member")
 
-    repo = COURSE_ORG.create_repo(repo_name, private=True)
+    repo = COURSE_ORG.create_repo(repo_name, private=True, has_projects=True)
     print(f"I: created repo {COURSE_ORG.name}/{repo.name}")
 
     team = COURSE_ORG.create_team(
-        team_name, repo_names=[repo], permission="admin", privacy="secret"
+        team_name, repo_names=[repo], privacy="secret"
     )
 
     print(f"I: created team {team.name}")
@@ -63,7 +63,7 @@ def create_team(team_name, repo_name, owners):
         team.add_membership(staff, role="maintainer")
 
     # CREATE A GH PROJECT
-    project = repo.create_project(name=team_name, body=f"Grupp i PSS {YEAR}")
+    project = COURSE_ORG.create_project(name=team_name, body=f"Grupp i PSS {YEAR}")
     print(f"I: created project {project.name}")
 
     # You will thank me when you don't receive spam

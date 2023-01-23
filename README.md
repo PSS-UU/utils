@@ -5,6 +5,18 @@ Systems, so far just `burndown.sh`. The other scripts are used by  to automate
 the use of GitHub, but students are encouraged to look at them if they are
 interested.
 
+
+
+## Installation
+
+To install the dependencies in a virtual environment, do: 
+
+```
+$ python3 -m venv .venv
+$ ./.venv/bin/pip3 install -r requirements.txt
+$ source .venv/bin/activate
+```
+
 ## Usage
 
 `burndown.py` is a script for generating a burndown chart of your progress
@@ -26,9 +38,26 @@ work on some systems (notably, some or all macOS versions have a wonky system
 Python setup). Providing a file name will run Matplotlib non-interactively,
 which (in my experience) is more reliable.
 
+`scan.sh`will scan for unprotected MySQL installations on the student servers.
+
+`stop-spamming-me.py PSS-UU` will remove you as owner from the student repositories in the PSS-UU organisation to avoid getting drowned in GitHub notifications. You will be prompted (to a somewhat annoying degree).
+
+`init-team-repository.py` Will initialise a project and an empty repository with a project Kanban board for a team. It will read GitHub user names from stdin:
+
+```
+$ ./init-team-repository.py "Fish friers" fish-friers << EOF
+hacker1
+hacker2
+hacker3
+EOF
+```
+
+
+
 ### Caveats
 
 The following caveats apply:
+
 - Emoji don't render well (read: at all) in chart titles.
 - The "number of days since start of course" is somewhat confusing for the
   x-axis in the burndown chart.
@@ -42,8 +71,7 @@ The following caveats apply:
   closing date is used as the date of completion. In any other case (including
   open PRs and issues) the script uses the update date of the given card, under
   the assumption that the last modification was moving it to DONE.
-  
-  
+
 ### Specifying Story Points
 
 You can specify story points in the notes of a card. Any number in parenthesis
