@@ -9,8 +9,8 @@ from datetime import datetime, timezone, timedelta
 DONE_KEYWORDS = ["Done"]
 DEFAULT_STORY_POINTS = Decimal(1)
 TIMEZONE = timezone(timedelta(hours=1), name="se")
-COURSE_START = datetime(2022, 1, 31, tzinfo=TIMEZONE)
-COURSE_END = datetime(2022, 3, 18, tzinfo=TIMEZONE)
+COURSE_START = datetime(2023, 1, 30, tzinfo=TIMEZONE)
+COURSE_END = datetime(2023, 3, 18, tzinfo=TIMEZONE)
 
 # Something like (17), or (5.5) or (13P)
 STORY_PTS_PAREN_RE = re.compile(r"[\(\[](?P<pts>\d+(\.\d+)?)([Pp]t?)?[\)\]]")
