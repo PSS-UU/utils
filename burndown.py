@@ -175,7 +175,12 @@ def main():
     repo_name = sys.argv[1]
     filename = sys.argv[2] if len(sys.argv) > 2 else None
 
-    project = COURSE_ORG.get_project(repo_name)
+    projects = COURSE_ORG.get_projects()
+    for p in projects:
+        if p.name == repo_name:
+            project = p
+            break
+
     todo_tasks, done_tasks = get_todo_done_tasks(project)
 
     todo_story_pts = sum((t.story_points for t in todo_tasks))
