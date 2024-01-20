@@ -1,0 +1,3 @@
+## In case you create the .venv inside the checkout
+.venv/
+githubtoken

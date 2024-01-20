@@ -16,6 +16,12 @@ $ python3 -m venv .venv
 $ ./.venv/bin/pip3 install -r requirements.txt
 $ source .venv/bin/activate
 ```
+Note, the set of package versions in the requirements.txt file does not work with Python 3.12. Unclear exactly which version of Python they were created for.  Probably they work for 3.11. 
+
+Note, with Python 3.12, on Windows 11, in 2024, using Python 3.12 installed from the Microsoft store, and from a Powershell in Terminal, PIP is accessed in a different way:
+```
+.\.venv\Scripts\pip3.exe install -r requirements.txtython3 -m venv .venv
+``` 
 
 ## Usage
 
