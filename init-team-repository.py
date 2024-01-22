@@ -21,7 +21,9 @@ USER_ME = g.get_user()
 YEAR = datetime.date.today().year
 
 # A list of GitHub handles to remove from repository watchers
-COTEACHERS = [g.get_user(user_name) for user_name in ["andreasjohnsson"]]
+# And who get added to each project, in addition to the teacher running this script. 
+#COTEACHERS = [g.get_user(user_name) for user_name in ["andreasjohnsson","amandasystems"]]
+COTEACHERS=[]
 PROJECT_COLUMNS = ["Blocked", "Backlog", "Doing", "Done"]
 
 print(f"Using GitHub user {USER_ME.login}")
@@ -85,18 +87,23 @@ def create_team(team_name, repo_name, owners):
     print(f"I: set up project {project.name}")
 
 
-def get_students():
-    return filter(lambda l: l, map(lambda l: l.strip(), sys.stdin))
+def get_students(studentfilename):
+    #return filter(lambda l: l, map(lambda l: l.strip(), sys.stdin))
+    with open(studentfilename) as f:
+        lines = [line.rstrip() for line in f]
+    return lines
 
 
 def main():
     if len(sys.argv) < 3:
-        print(f"Usage: {sys.argv[0]} team-name repo-name < student-team.txt")
+        print(f"Usage: {sys.argv[0]} team-name repo-name student-team.file")
         exit(1)
 
     team = sys.argv[1]
     repo = sys.argv[2]
-    students = get_students()
+    studentsfilename = sys.argv[3]
+    students = get_students(studentsfilename)
+    print(f"Students found in file: {students}")
     create_team(team, repo, students)
 
 if __name__ == "__main__":
